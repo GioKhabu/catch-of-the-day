@@ -1,9 +1,11 @@
 {
+  "homepage": "http://GioKhabu.github.io/catch-of-the-day",
   "name": "cotd",
   "version": "0.0.3",
   "private": true,
   "devDependencies": {
     "concurrently": "6.4.0",
+    "gh-pages": "^4.0.0",
     "react-scripts": "4.0.3"
   },
   "dependencies": {
@@ -21,6 +23,8 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts --openssl-legacy-provider start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
     "build": "react-scripts --openssl-legacy-provider build",
     "eject": "react-scripts eject",
